@@ -5,3 +5,9 @@
 [user]
 	email = "samuellarcombe@gmail.com"
 	name = "akhlus"
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/sam/.nix-profile/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/sam/.nix-profile/bin/gh auth git-credential

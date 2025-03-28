@@ -7,8 +7,8 @@
       "lla" = "ls -la";
       "python" = "python3";
       "py" = "python3";
-      "home" = "home-manager --flake ${settings.flakePath}#home";
-      "hs" = "home-manager --flake ${settings.flakePath}#home switch";
+      "home" = "sh ${settings.flakePath}/update.sh -p ${settings.flakePath}";
+      "hs" = "sh ${settings.flakePath}/update.sh -p ${settings.flakePath} -m switch";
       "update" = "sudo apt update && sudo apt upgrade -y";
     };
   };
