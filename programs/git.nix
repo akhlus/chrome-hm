@@ -1,11 +1,9 @@
-{settings, ...}: {
-  programs.git = {
-    enable = true;
-    userName = settings.username;
-    userEmail = settings.email;
-    extraConfig = {
-      init.defaultBranch = "main";
-      pull.rebase = "true";
-    };
+{
+  settings,
+  config,
+  ...
+}: {
+  home.file = {
+    ".config/git/config".source = config.lib.file.mkOutOfStoreSymlink "${settings.flakePath}/programs/files/git-config";
   };
 }

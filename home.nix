@@ -1,4 +1,8 @@
-{pkgs, settings, ...}: {
+{
+  pkgs,
+  settings,
+  ...
+}: {
   programs.home-manager.enable = true;
 
   home.username = "${settings.name}";
@@ -6,7 +10,6 @@
 
   imports = [
     ./programs/bash.nix
-    ./programs/btop.nix
     ./programs/git.nix
     ./programs/vscode.nix
     ./programs/xournalpp.nix
@@ -16,6 +19,7 @@
     alejandra
     fastfetch
     gh
+    git
     gnome-text-editor
     inter
     kgx
@@ -46,7 +50,6 @@
     Environment="PATH=%h/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/local/games:/usr/sbin:/usr/bin:/usr/games:/sbin:/bin"
     Environment="XDG_DATA_DIRS=%h/.nix-profile/share:%h/.local/share:%h/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share"
   '';
-  
 
   nixpkgs.config.allowUnfree = true;
   home.stateVersion = "24.11";

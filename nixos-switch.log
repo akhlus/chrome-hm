@@ -1,0 +1,37 @@
+warning: Git tree '/home/sam/chrome-hm' is dirty
+these 7 derivations will be built:
+  /nix/store/hmzi2msdwzzqpnln0ny6ay6jd9dxggw7-home-manager-path.drv
+  /nix/store/61in699rh63vkvwzfnvxxkra7q5bl547-activation-script.drv
+  /nix/store/bkw00njnfd8h8qla36v2zm7jff45aq0c-hm_fontconfigconf.d10hmfonts.conf.drv
+  /nix/store/fs1l1rn9797fn3m2xr9l2di1613hjxx8-bashrc.drv
+  /nix/store/i371ggc291f9p8pwpl1nbqfh52jgxlp8-hm_gitconfig.drv
+  /nix/store/msw9qr602kh1zjn10yyy3fyga00q3gla-home-manager-files.drv
+  /nix/store/h9i2kxzdfdi8qd30h0mrcly3925qw97q-home-manager-generation.drv
+building '/nix/store/hmzi2msdwzzqpnln0ny6ay6jd9dxggw7-home-manager-path.drv'...
+building '/nix/store/fs1l1rn9797fn3m2xr9l2di1613hjxx8-bashrc.drv'...
+building '/nix/store/i371ggc291f9p8pwpl1nbqfh52jgxlp8-hm_gitconfig.drv'...
+building '/nix/store/61in699rh63vkvwzfnvxxkra7q5bl547-activation-script.drv'...
+building '/nix/store/bkw00njnfd8h8qla36v2zm7jff45aq0c-hm_fontconfigconf.d10hmfonts.conf.drv'...
+building '/nix/store/msw9qr602kh1zjn10yyy3fyga00q3gla-home-manager-files.drv'...
+building '/nix/store/h9i2kxzdfdi8qd30h0mrcly3925qw97q-home-manager-generation.drv'...
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Creating new profile generation
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/xn7d2hz75f97n0mpbl45p3jb6pf2b0gp-user-environment.drv'...
+Activating dconfSettings
+Activating linkGeneration
+Cleaning up orphan links from /home/sam
+Creating home file links in /home/sam
+Activating onFilesChange
+Activating reloadSystemd
+Activating vscodeProfiles
+warning: Git tree '/home/sam/chrome-hm' is dirty
+
+There are 191 unread and relevant news items.
+Read them by running the command "home-manager news".
+
