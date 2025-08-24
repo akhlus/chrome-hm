@@ -1,49 +1,18 @@
-{
-  pkgs,
-  settings,
-  ...
-}: {
+{flakePath, ...}: {
   programs.home-manager.enable = true;
 
-  home.username = "${settings.name}";
-  home.homeDirectory = "/home/${settings.name}";
-
   imports = [
-    ./programs/bash.nix
-    ./programs/git.nix
-    ./programs/vscode.nix
-    ./programs/xournalpp.nix
+    ./programs
   ];
 
-  home.packages = with pkgs; [
-    alejandra
-    fastfetch
-    gh
-    git
-    gnome-text-editor
-    inter
-    kgx
-    kdePackages.dolphin
-    mpv
-    nano
-    nixd
-    source-code-pro
-    tldr
-    ungit
-    wget
-  ];
+  home = {
+    username = "sam";
+    homeDirectory = "/home/sam";
+    sessionVariables = {FLAKE_PATH = "${flakePath}";};
+    stateVersion = "24.11";
+  };
 
   fonts.fontconfig.enable = true;
-
-  home.sessionVariables = {
-    FLAKE_PATH = "${settings.flakePath}";
-  };
-
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-  };
 
   xdg.configFile."systemd/user/cros-garcon.service.d/override.conf".text = ''
     [Service]
@@ -52,5 +21,4 @@
   '';
 
   nixpkgs.config.allowUnfree = true;
-  home.stateVersion = "24.11";
 }

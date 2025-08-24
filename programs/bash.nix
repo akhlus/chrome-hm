@@ -1,4 +1,4 @@
-{settings, ...}: {
+{flakePath, ...}: {
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -7,8 +7,8 @@
       "lla" = "ls -la";
       "python" = "python3";
       "py" = "python3";
-      "home" = "sh ${settings.flakePath}/update.sh -p ${settings.flakePath}";
-      "hs" = "sh ${settings.flakePath}/update.sh -p ${settings.flakePath} -m switch";
+      "home" = "sh ${flakePath}/update.sh -p ${flakePath}";
+      "hs" = "sh ${flakePath}/update.sh -p ${flakePath} -m switch";
       "update" = "sudo apt update && sudo apt upgrade -y";
     };
   };
